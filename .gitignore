@@ -1,4 +1,5 @@
-.env
 target/
 .DS_Store
 .qodo
+config.bat
+node_modules

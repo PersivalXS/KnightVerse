@@ -445,7 +445,7 @@ impl Board {
     }
 
     // ISSUE #2: Implement the `slider_blockers` function.
-    pub fn slider_blockers(&self, our_king: Square, us: Color) -> Bitboard {
+    pub fn slider_blockers(&self, _our_king: Square, _us: Color) -> Bitboard {
         //Write your code here
         Bitboard::EMPTY // Temporary placeholder
     }
@@ -559,7 +559,7 @@ impl Board {
         let king_square = king_pos.unwrap();
         
         // Find all blockers between our king and attacking slider pieces
-        let blockers = find_slider_blockers(&new_board, king_square, piece_color);
+        let _blockers = Self::find_slider_blockers(&new_board, king_square, piece_color);
         
         // Store the blockers information somewhere or use it for move validation
         // For now, we'll just return the new board
@@ -614,7 +614,7 @@ impl Board {
                       current_rank >= 0 && current_rank < 8 && 
                       (current_file != attacker_file as i8 || current_rank != attacker_rank as i8) {
                     let square = Square {
-                        value: (current_rank * 8 + current_file) as u8,
+                        value: ((current_rank as u8) * 8 + (current_file as u8)) as u8,
                     };
                     ray = ray | square.bitboard();
                     
@@ -666,7 +666,7 @@ impl Board {
                     // Add all squares between king and attacker to the ray
                     while current_rank >= 0 && current_rank < 8 && current_rank != attacker_rank as i8 {
                         let square = Square {
-                            value: (current_rank * 8 + king_file) as u8,
+                            value: ((current_rank as u8) * 8 + (king_file as u8)) as u8,
                         };
                         ray = ray | square.bitboard();
                         
@@ -680,7 +680,7 @@ impl Board {
                     // Add all squares between king and attacker to the ray
                     while current_file >= 0 && current_file < 8 && current_file != attacker_file as i8 {
                         let square = Square {
-                            value: (king_rank * 8 + current_file) as u8,
+                            value: ((king_rank as u8) * 8 + (current_file as u8)) as u8,
                         };
                         ray = ray | square.bitboard();
                         
