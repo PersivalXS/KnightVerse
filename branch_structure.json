@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "#fix",
+    "#revamping",
+    "fix/sc-08-stale-owner-field-pre-test",
+    "fix/stale-owner-field-in-nft-metadata",
+    "main",
+    "origin",
+    "typed-ui",
+    "waitlist"
+  ],
+  "parent": {
+    "#fix": "main",
+    "#revamping": "main",
+    "fix/sc-08-stale-owner-field-pre-test": "main",
+    "fix/stale-owner-field-in-nft-metadata": "main",
+    "main": null,
+    "origin": "main",
+    "typed-ui": "main",
+    "waitlist": "main"
+  },
+  "order": [
+    "main",
+    "#fix",
+    "#revamping",
+    "fix/sc-08-stale-owner-field-pre-test",
+    "fix/stale-owner-field-in-nft-metadata",
+    "origin",
+    "typed-ui",
+    "waitlist"
+  ]
+}

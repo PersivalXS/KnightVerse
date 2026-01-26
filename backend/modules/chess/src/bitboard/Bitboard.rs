@@ -1,5 +1,3 @@
-use std::iter::Iterator;
-
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Bitboard(u64);
 
